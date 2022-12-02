@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="Reimbursement"
+            type="com.example.mvvm.reimbursement.ReimbursementViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/custom_toolbar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Purpose *" />
+
+            <EditText
+                android:id="@+id/etPurpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Enter Purpose"
+                android:imeOptions="actionDone"
+                android:padding="9dp"
+                android:text="@={Reimbursement.purpose}"
+                android:paddingBottom="3dp"
+                android:textCursorDrawable="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="From Date *" />
+
+                    <EditText
+                        android:id="@+id/etFromDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="9dp"
+                        android:background="@drawable/edittext_background"
+                        android:drawableEnd="@drawable/calendar"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="From date"
+                        android:longClickable="false"
+                        android:maxLines="1"
+                        android:nextFocusDown="@+id/state_et"
+                        android:padding="9dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:textCursorDrawable="@null" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="To Date *" />
+
+                    <EditText
+                        android:id="@+id/etToDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:drawableEnd="@drawable/calendar"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="To date"
+                        android:longClickable="false"
+                        android:maxLines="1"
+                        android:nextFocusDown="@+id/state_et"
+                        android:padding="9dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:textCursorDrawable="@null" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Reimbursement Amount *" />
+
+            <EditText
+                android:id="@+id/etAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Enter Reimbursement Amount"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:text="@={Reimbursement.amount}"
+                android:padding="9dp"
+                android:paddingBottom="3dp"
+                android:textCursorDrawable="@null" />
+
+            <Button
+                android:id="@+id/btApply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#1DB8EA"
+                android:text="Apply"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btListLeave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="9dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#1DB8EA"
+                android:text="Reimbursement List Info"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

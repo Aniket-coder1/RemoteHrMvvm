@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="Leave"
+            type="com.example.mvvm.leave.LeaveViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/custom_toolbar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Leave Type *" />
+
+                    <EditText
+                        android:id="@+id/etLeaveType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="9dp"
+                        android:background="@drawable/edittext_background"
+                        android:drawableRight="@drawable/dropdown"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Select Leave Type"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:padding="9dp"
+                        android:paddingBottom="3dp"
+                        android:textCursorDrawable="@null" />
+
+                    <com.example.mvvm.fontClass.CustomSpinner
+                        android:id="@+id/spLeaveType"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="From Date *" />
+
+                            <EditText
+                                android:id="@+id/etFromDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="9dp"
+                                android:background="@drawable/edittext_background"
+                                android:drawableEnd="@drawable/calendar"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="From date"
+                                android:longClickable="false"
+                                android:maxLines="1"
+                                android:nextFocusDown="@+id/state_et"
+                                android:padding="9dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:textCursorDrawable="@null" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="To Date *" />
+
+                            <EditText
+                                android:id="@+id/etToDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/edittext_background"
+                                android:drawableEnd="@drawable/calendar"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="To date"
+                                android:longClickable="false"
+                                android:maxLines="1"
+                                android:nextFocusDown="@+id/state_et"
+                                android:padding="9dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:textCursorDrawable="@null" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="From Session *" />
+
+                            <EditText
+                                android:id="@+id/etFrmSessions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="9dp"
+                                android:background="@drawable/edittext_background"
+                                android:drawableRight="@drawable/dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="Select From Sessions"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:padding="9dp"
+                                android:paddingBottom="3dp"
+                                android:textCursorDrawable="@null" />
+
+                            <com.example.mvvm.fontClass.CustomSpinner
+                                android:id="@+id/spFrmSessions"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="To Session *" />
+
+                            <EditText
+                                android:id="@+id/etToSessions"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="9dp"
+                                android:background="@drawable/edittext_background"
+                                android:drawableRight="@drawable/dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="Select To Sessions"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:padding="9dp"
+                                android:paddingBottom="3dp"
+                                android:textCursorDrawable="@null" />
+
+                            <com.example.mvvm.fontClass.CustomSpinner
+                                android:id="@+id/spToSessions"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/etContact"
+                        style="@style/editTextStylewhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start"
+                        android:text="@={Leave.contact}"
+                        android:hint="Contact Details *"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:minLines="1" />
+
+                    <EditText
+                        android:id="@+id/etReason"
+                        style="@style/editTextStylewhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start"
+                        android:text="@={Leave.reason}"
+                        android:hint="Reason *"
+                        android:maxLength="100"
+                        android:minLines="5" />
+
+                    <TextView
+                        android:id="@+id/tvAdd"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:layout_margin="8dp"
+                        android:visibility="visible"
+                        android:background="@drawable/add" />
+
+                    <Button
+                        android:id="@+id/btok"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:backgroundTint="#1DB8EA"
+                        android:onClick="@{()->Leave.hitApply()}"
+                        android:text="Apply Leave"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/tvListLeave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:backgroundTint="#1DB8EA"
+                        android:text="Leave List Info"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

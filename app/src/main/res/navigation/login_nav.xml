@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav"
+    app:startDestination="@id/mainLogin">
+    <fragment
+        android:id="@+id/mainLogin"
+        android:name="com.example.mvvm.mainLogin.MainLogin"
+        android:label="MainLogin"
+        tools:layout="@layout/main_login">
+        <action
+            android:id="@+id/action_mainLogin_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.mvvm.dashBoard.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_mainLogin"
+            app:destination="@id/mainLogin"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_leaveFragment"
+            app:destination="@id/leaveFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_contactList"
+            app:destination="@id/contactList" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_reimbursementFragment"
+            app:destination="@id/reimbursementFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/leaveList"
+        android:name="com.example.mvvm.liveList.LeaveListFragment"
+        android:label="LeaveList"
+        tools:layout="@layout/fragment_contact">
+
+        <action
+            android:id="@+id/action_leaveList_to_leaveFragment"
+            app:destination="@id/leaveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactList"
+        android:name="com.example.mvvm.contact.ContactFragment"
+        android:label="contactList"
+        tools:layout="@layout/fragment_contact">
+
+        <action
+            android:id="@+id/action_contactList_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaveFragment"
+        android:name="com.example.mvvm.leave.LeaveFragment"
+        android:label="LeaveFragment"
+        tools:layout="@layout/leave_fagment">
+        <action
+            android:id="@+id/action_leaveFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_leaveFragment_to_leaveList"
+            app:destination="@id/leaveList" />
+    </fragment>
+    <fragment
+        android:id="@+id/reimbursementFragment"
+        android:name="com.example.mvvm.reimbursement.ReimbursementFragment"
+        android:label="ReimbursementFragment"
+        tools:layout="@layout/fragment_reimbursement">
+        <action
+            android:id="@+id/action_reimbursementFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+</navigation>

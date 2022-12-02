@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mvvm</string>
+    <string name="login">Login</string>
+    <string name="enter_email_id">Enter Email ID</string>
+    <string name="enter_strong_password">Enter Strong Password</string>
+    <string name="login_btn">Login</string>
+    <string name="you_ve_just_displayed_this_awesome_pop_up_view">You\'ve just displayed this awesome pop up view</string>
+</resources>
