@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="Dashboard"
-            type="com.example.mvvm.dashBoard.DashboardViewModel"/>
+            type="com.example.remoteHR.dashBoard.DashboardViewModel" />
     </data>
 
     <LinearLayout
@@ -16,6 +17,7 @@
         <include
             android:id="@+id/toolbar"
             layout="@layout/custom_toolbar" />
+
         <TextView
             android:id="@+id/tvWelcome"
             android:layout_width="wrap_content"
@@ -130,8 +132,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:padding="5dp"
+                                android:text="Punch In"
                                 android:textColor="@color/drafttext"
-                               android:text="Punch In"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
 
@@ -153,21 +155,30 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:textColor="@color/drafttext"
                                 android:padding="5dp"
                                 android:text="Punch Out"
+                                android:textColor="@color/drafttext"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
                         </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
 
-                    <ImageView
-                        android:id="@+id/ivTime"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/img" />
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_view_container"
+                        android:layout_width="wrap_content"
+android:layout_gravity="center"
+
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivTime"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+
+                            android:background="@drawable/img" />
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
 
                     <TextView
                         android:id="@+id/tvDate"

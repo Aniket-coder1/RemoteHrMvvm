@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.mvvm">
+    package="com.example.remoteHR">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -20,14 +20,21 @@
         android:theme="@style/Theme.MVVM"
         tools:targetApi="31">
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.example.remoteHR.activity.MainProfileActivity"
             android:configChanges="orientation|layoutDirection|screenSize|density|screenLayout"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.SplashScreen"
+            android:name="com.example.remoteHR.activity.MainActivity"
+            android:configChanges="orientation|layoutDirection|screenSize|density|screenLayout"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.example.remoteHR.activity.SplashScreen"
             android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>

@@ -8,11 +8,11 @@
 
         <variable
             name="leaveListData"
-            type="com.example.mvvm.dataClass.leaveListData.LeaveListData" />
+            type="com.example.remoteHR.dataClass.leaveListData.LeaveListData" />
 
         <variable
             name="leaveListView"
-            type="com.example.mvvm.liveList.LeaveListViewModel" />
+            type="com.example.remoteHR.liveList.LeaveListViewModel" />
     </data>
 
     <RelativeLayout

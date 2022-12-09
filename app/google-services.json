@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "128903410212",
+    "project_id": "fcmhr-8f9dc",
+    "storage_bucket": "fcmhr-8f9dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128903410212:android:275db4399e71797a115eb1",
+        "android_client_info": {
+          "package_name": "com.example.remoteHR"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128903410212-9jbn6l0ekojeurqo70r1qef0nneqtg2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNRTr4t-VsuyJ3xmCwzMVGl98aFr0GekU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128903410212-9jbn6l0ekojeurqo70r1qef0nneqtg2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

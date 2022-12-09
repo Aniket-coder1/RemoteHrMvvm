@@ -3,90 +3,99 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <import type="android.view.View" />
 
         <variable
             name="ContactListData"
-            type="com.example.mvvm.contact.ContactData" />
+            type="com.example.remoteHR.contact.ContactData" />
     </data>
 
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginEnd="3dp">
+        app:cardCornerRadius="@dimen/_3sdp"
+        app:cardElevation="3dp">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/bg_cardview"
-            android:orientation="horizontal">
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="100dp">
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_cardview"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivContact"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop" />
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/ivCall"
+                    android:layout_toEndOf="@id/cardView"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvContNm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="Aniket M. Dange"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp" />
+
+                    <TextView
+                        android:id="@+id/tvDesignation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp" />
+
+                    <TextView
+                        android:id="@+id/tvContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp" />
+                </LinearLayout>
+
 
                 <ImageView
-                    android:id="@+id/ivContact"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:gravity="center"
-                    android:scaleType="centerCrop" />
-
-            </androidx.cardview.widget.CardView>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/ivCall"
-                android:layout_toEndOf="@id/cardView"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvContNm"
+                    android:id="@+id/ivCall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:text="Aniket M. Dange"
-                    android:textStyle="bold" />
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
 
-                <TextView
-                    android:id="@+id/tvEmail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp" />
+                    android:layout_weight="1"
+                    android:src="@drawable/call" />
+            </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/tvDesignation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp" />
-
-                <TextView
-                    android:id="@+id/tvContact"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp" />
-            </LinearLayout>
-
-
-            <ImageView
-                android:id="@+id/ivCall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="25dp"
-
-                android:layout_weight="1"
-                android:src="@drawable/call" />
         </RelativeLayout>
 
-    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </layout>

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="Leave"
-            type="com.example.mvvm.leave.LeaveViewModel" />
+            type="com.example.remoteHR.leave.LeaveViewModel" />
     </data>
 
     <RelativeLayout
@@ -53,7 +53,7 @@
                         android:paddingBottom="3dp"
                         android:textCursorDrawable="@null" />
 
-                    <com.example.mvvm.fontClass.CustomSpinner
+                    <com.example.remoteHR.fontClass.CustomSpinner
                         android:id="@+id/spLeaveType"
                         android:layout_width="match_parent"
                         android:layout_height="0dp" />
@@ -171,7 +171,7 @@
                                 android:paddingBottom="3dp"
                                 android:textCursorDrawable="@null" />
 
-                            <com.example.mvvm.fontClass.CustomSpinner
+                            <com.example.remoteHR.fontClass.CustomSpinner
                                 android:id="@+id/spFrmSessions"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp" />
@@ -208,7 +208,7 @@
                                 android:paddingBottom="3dp"
                                 android:textCursorDrawable="@null" />
 
-                            <com.example.mvvm.fontClass.CustomSpinner
+                            <com.example.remoteHR.fontClass.CustomSpinner
                                 android:id="@+id/spToSessions"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp" />

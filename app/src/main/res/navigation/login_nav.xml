@@ -6,7 +6,7 @@
     app:startDestination="@id/mainLogin">
     <fragment
         android:id="@+id/mainLogin"
-        android:name="com.example.mvvm.mainLogin.MainLogin"
+        android:name="com.example.remoteHR.mainLogin.MainLogin"
         android:label="MainLogin"
         tools:layout="@layout/main_login">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.example.mvvm.dashBoard.DashboardFragment"
+        android:name="com.example.remoteHR.dashBoard.DashboardFragment"
         android:label="DashboardFragment"
         tools:layout="@layout/fragment_dashboard">
         <action
@@ -33,11 +33,14 @@
         <action
             android:id="@+id/action_dashboardFragment_to_reimbursementFragment"
             app:destination="@id/reimbursementFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_mainProfileFragment"
+            app:destination="@id/mainProfileFragment" />
 
     </fragment>
     <fragment
         android:id="@+id/leaveList"
-        android:name="com.example.mvvm.liveList.LeaveListFragment"
+        android:name="com.example.remoteHR.liveList.LeaveListFragment"
         android:label="LeaveList"
         tools:layout="@layout/fragment_contact">
 
@@ -47,7 +50,7 @@
     </fragment>
     <fragment
         android:id="@+id/contactList"
-        android:name="com.example.mvvm.contact.ContactFragment"
+        android:name="com.example.remoteHR.contact.ContactFragment"
         android:label="contactList"
         tools:layout="@layout/fragment_contact">
 
@@ -57,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/leaveFragment"
-        android:name="com.example.mvvm.leave.LeaveFragment"
+        android:name="com.example.remoteHR.leave.LeaveFragment"
         android:label="LeaveFragment"
         tools:layout="@layout/leave_fagment">
         <action
@@ -69,11 +72,20 @@
     </fragment>
     <fragment
         android:id="@+id/reimbursementFragment"
-        android:name="com.example.mvvm.reimbursement.ReimbursementFragment"
+        android:name="com.example.remoteHR.reimbursement.ReimbursementFragment"
         android:label="ReimbursementFragment"
         tools:layout="@layout/fragment_reimbursement">
         <action
             android:id="@+id/action_reimbursementFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainProfileFragment"
+        android:name="com.example.remoteHR.profile.mainProfile.MainProfileFragment"
+        android:label="MainProfileFragment"
+        tools:layout="@layout/fragment_main_profile">
+        <action
+            android:id="@+id/action_mainProfileFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
     </fragment>
 </navigation>

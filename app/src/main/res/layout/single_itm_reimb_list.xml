@@ -7,7 +7,7 @@
 
         <variable
             name="ReimburseListData"
-            type="com.example.mvvm.dataClass.ReimburseListData" />
+            type="com.example.remoteHR.dataClass.reimburseListData.ReimburseListData" />
     </data>
 
     <RelativeLayout

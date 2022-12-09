@@ -4,10 +4,10 @@
     <data>
         <variable
             name="LeaveList"
-            type="com.example.mvvm.liveList.LeaveListViewModel" />
+            type="com.example.remoteHR.liveList.LeaveListViewModel" />
         <variable
             name="ContactList"
-            type="com.example.mvvm.contact.ContactViewModel" />
+            type="com.example.remoteHR.contact.ContactViewModel" />
     </data>
 
 

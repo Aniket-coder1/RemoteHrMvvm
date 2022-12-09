@@ -7,7 +7,7 @@
     <data>
         <variable
             name="loginViewModel"
-            type="com.example.mvvm.mainLogin.LoginViewModel" />
+            type="com.example.remoteHR.mainLogin.LoginViewModel" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
